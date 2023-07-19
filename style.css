@@ -72,8 +72,10 @@ nav {
 }
 
 .nav-items li {
+  color: #3c354f;
   list-style: none;
   font-size: 2rem;
+  font-weight: 500;
 }
 
 .nav-items-follow-block {
@@ -81,17 +83,20 @@ nav {
   align-items: center;
   justify-content: space-around;
   gap: 2rem;
+  border-radius: 8px;
+  background: rgba(11, 2, 35, 0.1);
+  padding: 1rem 2rem;
 }
 
 .nav-icon {
   font-size: 2.5rem;
 }
 
-.nav-items-follow-block {
+/* .nav-items-follow-block {
   border-radius: 8px;
   background: rgba(11, 2, 35, 0.1);
-  padding: 1rem;
-}
+  padding: 1rem 2rem;
+} */
 
 /* banner section styles */
 
@@ -265,34 +270,114 @@ nav {
   padding-top: 2rem;
 }
 
-.online-games-videos {
+/* .online-games-videos {
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 2rem;
   margin: 2rem auto;
   margin-bottom: 6rem;
+} */
+
+.online-games-videos {
+  width: 80vw;
+  margin: 2rem auto;
+  margin-bottom: 8rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  place-items: center;
+  align-items: start;
 }
 
 .card {
-  width: 35rem;
-  /* background-color: rgba(229, 84, 115, 0.05);
-  box-shadow: rgba(229, 84, 115, 0.2) 0 3rem 6rem 0; */
+  /* width: 35rem;
+  position: relative;
+  background-color: rgba(229, 84, 115, 0.05);
+  box-shadow: rgba(229, 84, 115, 0.2) 0 3rem 6rem 0;
   border-radius: 0.5rem;
-  transition: 0.4s ease-in all;
+  transition: 0.4s ease-in all; */
+  position: relative;
+  width: 100%;
+  max-width: 400px;
 }
 
-.card-image {
-  /* width: 100%; */
+/* .card-image {
+  width: 100%;
   width: 34rem;
   height: 40rem;
   flex-shrink: 0;
   display: block;
   object-fit: cover;
+} */
+
+.card-image {
+  /* display: block;
+  width: 100%;
+  height: auto; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ovarlay-icon {
+  color: white;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-text {
+  font-size: 1rem;
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  color: #f948b2;
+
+  /* color: white;
+  font-size: 3rem;
+  position: absolute;
+  margin-bottom: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; */
+}
+
+.overlay-video-icon {
+  font-size: 5rem;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  border: 5px solid #f948b2;
+}
+
+.overlay-video-icon:hover {
+  color: #f948b2;
 }
 
 .card-title {
   color: #534c64;
+  width: 40rem;
+  padding: 2rem;
   font-size: 2rem;
   font-weight: 500;
   line-height: 2;
@@ -504,6 +589,35 @@ a {
 /* ================================================================= */
 
 /* media queries */
+@media screen and (max-width: 1368px) {
+  .online-games-videos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .game-info {
+    margin-bottom: 5rem;
+  }
+  .game-info-img {
+    height: 30rem;
+    width: 100%;
+  }
+  .game-info-sub-img {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -27rem;
+    left: -6rem;
+  }
+  .game-info-title {
+    width: 70%;
+    text-align: right;
+    padding: 8rem 5rem;
+  }
+  .games-genre-section {
+    margin: 15rem 0;
+  }
+}
 
 @media screen and (max-width: 976px) {
   .navbar {
@@ -608,12 +722,16 @@ a {
     margin: 0 3rem;
   }
   .online-games-videos {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    place-items: center;
+    /* flex-direction: column;
     align-items: center;
-    margin: 4rem 0;
+    margin: 4rem 0; */
   }
   .card-title {
     text-align: center;
+    width: 100%;
     font-size: 1.5rem;
   }
   .game-info {
@@ -654,21 +772,3 @@ a {
     width: 100%;
   }
 }
-
-/* @media screen and (min-width: 577px) and (max-width: 976px) {
-  .banner {
-    width: 100%;
-    padding: 2rem 0;
-  }
-  .banner-info {
-    width: 50%;
-  }
-  .banner-img {
-    /* margin-top: 1rem; */
-/* width: 50%;
-    height: auto; */
-
-/* display: block;
-    object-fit: cover; */
-/* }
-} */
