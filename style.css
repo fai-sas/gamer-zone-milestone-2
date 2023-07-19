@@ -594,6 +594,13 @@ a {
 /* ================================================================= */
 
 /* media queries */
+
+@media screen and (max-width: 1800px) {
+  .game-info-desc {
+    width: 30rem;
+  }
+}
+
 @media screen and (max-width: 1368px) {
   .online-games-videos {
     /* display: grid;
