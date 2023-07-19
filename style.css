@@ -42,6 +42,7 @@ nav {
   display: inline-block;
   margin-right: 1rem;
   font-size: 4.5rem;
+  cursor: pointer;
 }
 
 .nav-logo-title {
@@ -50,12 +51,14 @@ nav {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 .nav-title {
   font-size: 3rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .nav-items {
@@ -163,6 +166,7 @@ nav {
   font-size: 1.6rem;
   font-weight: 700;
   margin-right: 1.5rem;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -305,7 +309,7 @@ nav {
 
 .game-info {
   max-width: 70vw;
-  margin: 0 auto 15rem;
+  margin: 0 auto 12rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -349,25 +353,145 @@ nav {
   border-radius: 1rem;
 }
 
-/* .game-info-sub-img img {
-  width: 32rem;
-  height: 36rem;
-  border-radius: 1rem;
-  border: 1rem solid #fff;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-} */
-
 .game-info-sub-img {
-  width: 32rem;
-  height: 36rem;
+  width: 26rem;
+  height: 30rem;
   display: block;
   object-fit: cover;
   border-radius: 1rem;
   position: absolute;
   bottom: -5rem;
   left: -15rem;
+}
+
+/* games genre section */
+
+.games-genre-section {
+  margin: 6rem 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 66, 165, 0.03) 0%,
+    rgba(255, 66, 165, 0.03) 100%
+  );
+  min-height: 40vh;
+}
+.games-genre-image {
+  width: 6rem;
+}
+
+.games-genre-type {
+  padding: 8rem 0;
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.games-genre-info {
+  width: 30rem;
+  height: 8rem;
+  margin: 3rem 0;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 5rem;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.games-genre-desc {
+  color: #0b0223;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.games-genre-info:hover {
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #ff42a5;
+}
+
+/* footer section */
+.footer {
+  background: #0b0223;
+  padding: 8rem 0;
+}
+.footer-section {
+  max-width: 70vw;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.footer-title {
+  color: white;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.footer-list {
+  display: flex;
+  gap: 8rem;
+  padding: 4rem;
+  transition: all 0.3s ease-in;
+}
+
+.footer-icon {
+  font-size: 4rem;
+}
+
+.footer-features {
+  gap: 4rem;
+}
+
+.footer-features a,
+.footer-features p {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0;
+}
+
+.list,
+.fa-brands {
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.list:hover {
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.fa-brands:hover {
+  color: #ff42a5;
+  font-weight: 600;
+}
+
+.footer-copyright {
+  padding: 1rem 0;
 }
 
 /* ================================================================= */
@@ -509,6 +633,7 @@ nav {
     padding-bottom: 3rem;
   }
   .game-info-img {
+    height: 30rem;
     width: 100%;
   }
   .game-info-sub-img {
@@ -516,8 +641,17 @@ nav {
     height: 20rem;
     border-radius: 1rem;
     position: absolute;
-    bottom: 26rem;
+    bottom: -15rem;
     left: -5rem;
+  }
+  .footer-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-bar {
+    width: 100%;
   }
 }
 
